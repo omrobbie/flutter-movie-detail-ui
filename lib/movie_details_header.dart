@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_detail/arc_banner_image.dart';
 import 'package:movie_detail/models.dart';
+import 'package:movie_detail/poster.dart';
 
 class MovieDetailsHeader extends StatelessWidget {
   final Movie movie;
@@ -56,7 +57,10 @@ class MovieDetailsHeader extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
-              new Text('Poster'),
+              new Poster(
+                movie.posterUrl,
+                height: 180.0,
+              ),
               new Expanded(
                 child: new Padding(
                   padding: const EdgeInsets.only(left: 16.0),
