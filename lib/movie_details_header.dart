@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movie_detail/arc_banner_image.dart';
 import 'package:movie_detail/models.dart';
 import 'package:movie_detail/poster.dart';
+import 'package:movie_detail/rating_information.dart';
 
 class MovieDetailsHeader extends StatelessWidget {
   final Movie movie;
@@ -21,8 +22,10 @@ class MovieDetailsHeader extends StatelessWidget {
     }).toList();
   }
 
+  @override
   Widget build(BuildContext context) {
     var textTheme = Theme.of(context).textTheme;
+
     var movieInformation = new Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -32,7 +35,7 @@ class MovieDetailsHeader extends StatelessWidget {
         ),
         new Padding(
           padding: const EdgeInsets.only(top: 8.0),
-          child: new Text('Rating Information'),
+          child: new RatingInformation(movie),
         ),
         new Padding(
           padding: const EdgeInsets.only(top: 12.0),
@@ -64,7 +67,7 @@ class MovieDetailsHeader extends StatelessWidget {
               new Expanded(
                 child: new Padding(
                   padding: const EdgeInsets.only(left: 16.0),
-                  child: new Text('Movie Information'),
+                  child: movieInformation,
                 ),
               ),
             ],
