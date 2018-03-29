@@ -29,6 +29,18 @@ flutter:
   # assets:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
+  assets:
+    - assets/1.png
+    - assets/2.png
+    - assets/3.png
+    - assets/4.png
+    - assets/banner.png
+    - assets/ellie.png
+    - assets/eric.png
+    - assets/jenny.png
+    - assets/kevin.png
+    - assets/louis.png
+    - assets/poster.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

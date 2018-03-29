@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_detail/arc_banner_image.dart';
 import 'package:movie_detail/models.dart';
 
 class MovieDetailsHeader extends StatelessWidget {
@@ -45,7 +46,7 @@ class MovieDetailsHeader extends StatelessWidget {
       children: <Widget>[
         new Padding(
           padding: const EdgeInsets.only(bottom: 140.0),
-          child: new Text('Arc Banner Image'),
+          child: new ArcBannerImage(movie.bannerUrl),
         ),
         new Positioned(
           bottom: 0.0,
